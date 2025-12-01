@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <title>Mi primer sitio web</title>
+  <style>
+html{
+    background-color: blanchedalmond;
+}
+footer{
+    background-color: #00bcd4; /* New cyan color */
+}
+
+
+footer{
+padding: 20px 0; /* Add some padding for height */
+text-align: center; /* Center the text */
+}
+
+
+footer a {
+color: white;
+}
+
+
+body{
+    width: 600px;background: wheat;margin: auto;
+    display: flex;
+    flex-direction: column; /* Important: Stacks the main content and footer */
+}
+
+main{
+    background-color: cornsilk ;
+}
+footer{background-color: aquamarine;}
+/* Contenedor */
+#container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: center;
+}
+
+/* Items */
+.item {
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  grid-template-columns: auto auto auto;
+
+  /* flex: 0 1 auto; */
+}
+footer{
+padding: 20px 0; /* Add some padding for height */
+text-align: center; /* Center the text */
+}
+
+
+footer a {
+color: white;
+}
+
+hr{
+padding-left: 10px;
+}
+p{
+    padding-left: 20px;
+            }
+
+
+body{
+    width: 600px;background: white;margin: auto;
+    display: flex;
+}
+
+
+  </style>
+</head>
+  <body>
+    <main>
+        <div id="sobremi">
+            <h1>Bohdan SYdorenko</h1>
+            <h2>Full stack developer</h2>
+            <h5>            SOBRE MÍ
+                Estudiante de
+                Deserolla de apllicasiones
+                multi platforma.
+                Me considero una persona
+                responsable y ordenado.
+                Buscando mi primera
+                experiencia laboral.
+            </h5>
+            <hr style="border: 2px solid black;">
+
+        </div>
+        <section id="portfolio">
+        <div id="container">
+            <article class="item">
+                <div id="titulo">
+                    <h1>Proyecto 1</h1>
+                    <h2>Full stack developer</h2>
+                    <h5>Aplicación Web de Gestión de Tareas</h5>
+                </div>
+                <div id="descripcion">
+                        <p>Aplicación web creada con React y Firebase para gestionar tareas en tiempo real, permitiendo crear, editar y eliminar entradas fácilmente.</p>
+                <div id="fecha">
+                </div>
+                            <p>Fecha de creación: junio de 2025</p>
+                </div>
+                <div id="categoria ">
+                        <p>Categoría: Desarrollo Web</p>
+                </div>
+                <div id="imagen">
+                        <img src="project1.jpg" alt="Captura del proyecto 1" width="200" height="200">
+                </div>
+                <hr style="border: 2px solid black;">
+
+            </article>
+            <article class="item">
+                <div id="titulo">
+                    <h2>Proyecto 2</h2>
+                    <h5>Aplicación Móvil de Fitness</h5>
+                </div>
+                <div id="descripcion">
+                    <p>App móvil desarrollada con React Native que permite registrar rutinas de ejercicio, seguimiento de progreso y objetivos personales.</p>
+                    <div id="fecha">
+                        <p>Fecha de creación: septiembre de 2025</p>
+                    </div>
+                </div>
+                <div id="categoria">
+                    <p>Categoría: Desarrollo Móvil</p>
+                </div>
+                <div id="imagen">
+                    <img src="project2.jpg" alt="Captura del proyecto 2" width="200" height="200">
+                </div>
+                <hr style="border: 2px solid black;">
+
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="item">
+                <div id="titulo">
+                    <h2>Proyecto 3</h2>
+                    <h5>Plataforma de E-commerce</h5>
+                </div>
+                <div id="descripcion">
+                    <p>Desarrollo de una plataforma de comercio electrónico con Node.js, Express y MongoDB, con gestión de usuarios y carrito de compras.</p>
+                    <div id="fecha">
+                        <p>Fecha de creación: noviembre de 2025</p>
+                    </div>
+                </div>
+                <div id="categoria">
+                    <p>Categoría: Backend / Full Stack</p>
+                </div>
+                <div id="imagen">
+                    <img src="project3.jpg" alt="Captura del proyecto 3" width="200" height="200">
+                </div>
+                <hr style="border: 2px solid black;">
+
+            </article>
+            </section>
+        </div>
+    
+    </main>
+    <footer>
+        <a href="https://github.com/Sagmanua">github</a>
+        <a href="https://t.me/Sagmanua">Telegram</a>
+        <a href="https://www.linkedin.com/in/bohdan-sydorenko-6993b1397">LinkedIN</a>
+        
+    </footer>
+</body>
+</html>
