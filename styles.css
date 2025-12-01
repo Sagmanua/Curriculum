@@ -1,0 +1,16 @@
+html,body {
+    background: wheat;
+}
+header {
+    background: seagreen;
+    height: 300px;
+}
+main{
+    background: wheat;
+    height: 500px;
+
+}
+footer{
+    background: rgb(96, 170, 128);
+    height: 400px;
+}
