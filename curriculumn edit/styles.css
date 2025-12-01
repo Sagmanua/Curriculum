@@ -1,18 +1,28 @@
 html,body {
     background: wheat;
-        height: 100%;
+    height: 100%;
 
 }
 header {
     background: seagreen;
     height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 main{
     background: wheat;
     height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 
 }
 footer{
     background: rgb(96, 170, 128);
     height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
