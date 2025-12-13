@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV — Bohdan Sydorenko</title>
+  <style>
+    :root {
+      --bg: #f3f6fb;
+      --card: #ffffff;
+      --primary: #1f6f5c; /* sea green */
+      --primary-soft: rgba(31,111,92,.12);
+      --text: #0f172a;
+      --muted: #6b7280;
+      --chip: #eef2f7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: linear-gradient(180deg, #e9f5f1, var(--bg));
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 32px auto;
+      padding: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(15,23,42,.08);
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+      padding: 32px;
+      background: linear-gradient(135deg, var(--primary), #2fa37f);
+      color: #fff;
+    }
+
+    .photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.18);
+      display: grid;
+      place-items: center;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .subtitle {
+      margin-top: 6px;
+      opacity: .9;
+      font-size: 15px;
+    }
+
+    .contact {
+      margin-top: 14px;
+      font-size: 14px;
+      opacity: .95;
+    }
+
+    .actions { margin-top: 14px; }
+
+    .btn {
+      display: inline-block;
+      background: #ffffff;
+      color: var(--primary);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0,0,0,.15);
+    }
+
+    /* MAIN */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 24px;
+      padding: 28px;
+      background: linear-gradient(180deg, var(--primary-soft), transparent);
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 14px rgba(15,23,42,.05);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: .3px;
+      color: var(--primary);
+    }
+
+    p {
+      margin: 6px 0 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .summary {
+      background: var(--primary-soft);
+      padding: 14px;
+      border-radius: 10px;
+    }
+
+    .experience-item { margin-top: 10px; }
+
+    /* CHIPS */
+    .chip {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--chip);
+      font-size: 13px;
+      margin: 6px 6px 0 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* RIGHT COLUMN */
+    aside {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 4px 14px rgba(15,23,42,.05);
+      height: fit-content;
+    }
+
+    .block { margin-bottom: 18px; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 14px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 860px) {
+      main { grid-template-columns: 1fr; }
+      header { grid-template-columns: 1fr; text-align: center; }
+      .photo { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="container">
+    <div class="card">
+        
+      <header>
+        <div class="photo">BS</div>
+        <div>
+          <h1>Bohdan Sydorenko</h1>
+          <div class="subtitle">Estudiante de Desarrollo de Aplicaciones Multiplataforma</div>
+          <div class="actions">
+            <a class="btn" href="#" id="downloadBtn" >Descargar CV</a>
+            <script src="script.js"></script>
+            <a class="btn" href="https://sagmanua.github.io/Portafolio/" target="_blank">Ver Portfolio</a>
+          </div>
+          <div class="contact">📧 sidorenko.bogdan.05@gmail.com · 📞 645 573 661 · 📍 Valencia</div>
+        </div>
+      </header>
+
+      <main>
+        <div>
+          <section>
+            <h2>Sobre mí</h2>
+            <div class="summary">
+              Estudiante de Desarrollo de Aplicaciones Multiplataforma con actitud proactiva y gran motivación por aprender. Busco mi primera experiencia laboral en el sector tecnológico.
+            </div>
+          </section>
+
+          <section>
+            <h2>Experiencia</h2>
+            <div class="experience-item">
+              <strong>Voluntario en Educación Infantil — Ucrania</strong>
+              <div class="muted">Colaboración voluntaria</div>
+              <p>Organización y apoyo en actividades educativas y recreativas, garantizando un entorno seguro y participativo.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Estudios</h2>
+            <div class="experience-item">
+              <strong>Desarrollo de Aplicaciones Multiplataforma</strong>
+              <div class="muted">2025 — Actualidad</div>
+              <p>Universidad Borcelle</p>
+            </div>
+            <div class="experience-item">
+              <strong>Bachiller en Ucrania</strong>
+              <div class="muted">2020 — 2022</div>
+              <p>Escuela Secundaria Borcelle de Matemáticas</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Competencias</h2>
+            <span class="chip">Trabajo en equipo</span>
+            <span class="chip">Resolución de problemas</span>
+            <span class="chip">Actitud proactiva</span>
+            <span class="chip">Aprendizaje continuo</span>
+          </section>
+        </div>
+
+        <aside>
+          <div class="block">
+            <h2>Contacto</h2>
+            <p class="muted">📞 64 557 3661</p>
+            <p class="muted">📧 sidorenko.bogdan.05@gmail.com</p>
+            <p class="muted">📍 Valencia,Malva-Rosa,46011 España</p>
+            <p class="muted">🐙 GitHub: <a href="https://github.com/Sagmanua" target="_blank">github.com/Sagmanua</a></p>
+            <p class="muted">💼 LinkedIn: <a href="https://www.linkedin.com/in/bohdan-sydorenko-6993b1397" target="_blank">bohdan-sydorenko</a></p>
+            <p class="muted">✈️ Telegram: <a href="https://t.me/Sagmanua" target="_blank">t.me/Sagmanua</a></p>
+          </div>
+
+          <div class="block">
+            <h2>Idiomas</h2>
+            <p class="muted">Ruso — Nativo</p>
+            <p class="muted">Ucraniano — Nativo</p>
+            <p class="muted">Español — Intermedio</p>
+            <p class="muted">Inglés — Intermedio</p>
+          </div>
+
+          <div class="block">
+            <h2>Tecnologías</h2>
+            <span class="chip">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">PHP</span>
+            <span class="chip">JS</span>
+          </div>
+
+          <div class="block">
+            <h2>Herramientas</h2>
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">Visual Studio Code</span>
+            <span class="chip">PyCharm</span>
+            <span class="chip">MySQL Workbench</span>
+            <span class="chip">SQLite</span>
+            
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        CV — Bohdan Sydorenko
+      </footer>
+
+    </div>
+  </div>
+</body>
+</html>
