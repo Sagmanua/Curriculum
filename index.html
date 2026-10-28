@@ -3,313 +3,274 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CV — Bohdan Sydorenko</title>
-
+  <meta name="theme-color" content="#142b3b">
+  <meta name="description" content="Currículum de Bohdan Sydorenko, estudiante de Desarrollo de Aplicaciones Multiplataforma.">
+  <title>Bohdan Sydorenko — Currículum</title>
   <style>
     :root {
-      --bg: #f3f6fb;
-      --card: #ffffff;
-      --primary: #1f6f5c;
-      --primary-soft: rgba(31,111,92,.12);
-      --text: #0f172a;
-      --muted: #6b7280;
-      --chip: #eef2f7;
+      color-scheme: light;
+      --ink: #172b3a;
+      --ink-soft: #334b5c;
+      --muted: #647586;
+      --accent: #16745f;
+      --accent-light: #e9f4f0;
+      --line: #dce5e9;
+      --paper: #ffffff;
+      --canvas: #edf2f4;
+      --radius: 18px;
     }
-
     * { box-sizing: border-box; }
-
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background: linear-gradient(180deg, #e9f5f1, var(--bg));
-      color: var(--text);
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 32px auto;
-      padding: 16px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(15,23,42,.08);
-      overflow: hidden;
-    }
-
-
-
-
-
-    h1 { margin: 0; font-size: 30px; }
-
-    .btn {
-      display: inline-block;
-      background: #fff;
-      color: var(--primary);
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-weight: 600;
-      text-decoration: none;
+      padding: 36px 18px;
+      background: radial-gradient(ellipse at top left, #e1eee9 0, transparent 42%), var(--canvas);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 14px;
-      margin-right: 8px;
-      cursor: pointer;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
-
-    main {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 24px;
-      padding: 28px;
-      background: linear-gradient(180deg, var(--primary-soft), transparent);
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+    a:hover { color: #0d4e40; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #6bb8a5; outline-offset: 3px; }
+    .resume { width: min(100%, 1000px); margin: 0 auto; background: var(--paper); border: 1px solid rgba(23,43,58,.08); border-radius: 22px; overflow: hidden; box-shadow: 0 24px 70px rgba(22,43,57,.12); }
+    .hero { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 26px; align-items: center; padding: 42px 46px 36px; color: white; background: linear-gradient(120deg, #142b3b 0%, #1b4650 62%, #16745f 100%); }
+    .portrait { width: 112px; height: 112px; border-radius: 22px; overflow: hidden; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.38); display: grid; place-items: center; }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; }
+    .eyebrow { margin: 0 0 7px; color: #a9d9cb; text-transform: uppercase; letter-spacing: .16em; font-size: 10px; font-weight: 800; }
+    h1 { margin: 0; font-size: clamp(28px, 4vw, 39px); line-height: 1.12; letter-spacing: -.04em; font-weight: 760; }
+    .role { margin: 10px 0 0; color: #e1eeeb; font-size: 15px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 9px 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,.42); color: white; background: rgba(255,255,255,.09); text-decoration: none; font-size: 12px; font-weight: 750; transition: transform .18s ease, background .18s ease; }
+    .btn.primary { background: white; color: var(--ink); border-color: white; }
+    .btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.18); color: white; }
+    .btn.primary:hover { background: #e9f4f0; color: var(--ink); }
+    .layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(240px, .9fr); gap: 34px; padding: 34px 46px 38px; }
+    .main-column, .side-column { min-width: 0; }
+    .section { margin: 0 0 29px; break-inside: avoid; }
+    .section:last-child { margin-bottom: 0; }
+    .section-heading { display: flex; align-items: center; gap: 11px; margin: 0 0 15px; color: var(--ink); font-size: 12px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+    .section-heading::before { content: ""; display: block; width: 4px; height: 17px; border-radius: 4px; background: var(--accent); }
+    .summary { margin: 0; padding: 16px 18px; border: 1px solid #dcece6; border-radius: 12px; background: var(--accent-light); color: #294b44; }
+    .timeline { position: relative; margin-left: 4px; padding-left: 20px; border-left: 1px solid var(--line); }
+    .entry { position: relative; margin: 0 0 22px; break-inside: avoid; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry::before { content: ""; position: absolute; left: -25px; top: 6px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px white, 0 0 0 5px #c8e2d9; }
+    .entry-title { margin: 0; font-size: 14px; line-height: 1.45; font-weight: 800; }
+    .entry-meta { margin: 4px 0 7px; color: var(--muted); font-size: 12px; font-weight: 650; }
+    .entry p { margin: 0; color: var(--ink-soft); font-size: 13px; }
+    .side-panel { padding: 19px; margin-bottom: 17px; border: 1px solid var(--line); border-radius: 14px; background: #fbfcfc; break-inside: avoid; }
+    .side-panel:last-child { margin-bottom: 0; }
+    .side-panel .section-heading { margin-bottom: 13px; }
+    .contact-list { display: grid; gap: 12px; }
+    .contact-item { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 8px; align-items: start; }
+    .contact-icon { display: grid; place-items: center; width: 25px; height: 25px; border-radius: 8px; color: var(--accent); background: var(--accent-light); font-size: 12px; font-weight: 800; }
+    .contact-label { display: block; color: var(--muted); font-size: 10px; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
+    .contact-value { display: block; font-size: 12px; line-height: 1.5; }
+    .plain-list { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .plain-list li { color: var(--ink-soft); font-size: 12px; }
+    .language-level { color: var(--muted); }
+    .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+    .chip { display: inline-flex; padding: 5px 9px; border-radius: 7px; border: 1px solid #dfe8e9; background: #f1f5f5; color: #304957; font-size: 11px; font-weight: 650; }
+    .footer { display: flex; justify-content: space-between; gap: 12px; padding: 16px 46px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+    @media (max-width: 720px) {
+      body { padding: 12px; }
+      .resume { border-radius: 16px; }
+      .hero { grid-template-columns: 78px minmax(0,1fr); gap: 17px; padding: 27px 23px; }
+      .portrait { width: 78px; height: 78px; border-radius: 16px; }
+      .role { font-size: 13px; }
+      .layout { grid-template-columns: 1fr; gap: 0; padding: 25px 23px 28px; }
+      .side-column { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 13px; align-items: start; }
+      .side-panel { margin: 0; padding: 15px; }
+      .footer { padding: 14px 23px; }
     }
-
-    section, aside {
-      background: #fff;
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: 0 4px 14px rgba(15,23,42,.05);
-      margin-bottom: 18px;
+    @media (max-width: 480px) {
+      body { padding: 0; }
+      .resume { border: 0; border-radius: 0; }
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .portrait { margin: 0 auto; }
+      .actions { justify-content: center; }
+      .side-column { grid-template-columns: 1fr; }
+      .footer { flex-direction: column; text-align: center; }
     }
-
-    h2 { color: var(--primary); font-size: 16px; }
-
-    .summary {
-      background: var(--primary-soft);
-      padding: 14px;
-      border-radius: 10px;
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
     }
-
-    .chip {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: var(--chip);
-      font-size: 13px;
-      margin: 6px 6px 0 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 14px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-
-
-    /* Hide buttons in PDF */
+    @page { size: A4 portrait; margin: 7mm; }
     @media print {
-      .actions { display: none; }
+      html, body { width: 100%; min-height: 100%; margin: 0; padding: 0; background: #fff; font-size: 10pt; line-height: 1.48; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .resume { width: 100%; max-width: none; min-height: 283mm; margin: 0; border: 0; border-radius: 0; box-shadow: none; overflow: visible; display: flex; flex-direction: column; }
+      .hero { padding: 25px 28px; grid-template-columns: 90px minmax(0,1fr); gap: 20px; }
+      .portrait { width: 90px; height: 90px; border-radius: 14px; }
+      .eyebrow { margin-bottom: 5px; font-size: 8pt; }
+      h1 { font-size: 28px; }
+      .role { margin-top: 7px; font-size: 10.5pt; }
+      .actions { display: none !important; }
+      .layout { flex: 1; grid-template-columns: minmax(0,1.65fr) minmax(205px,.9fr); gap: 20px; padding: 20px 28px; align-items: stretch; }
+      .main-column, .side-column { display: flex; flex-direction: column; justify-content: space-between; gap: 12px; }
+      .section { margin-bottom: 0; }
+      .section-heading { gap: 9px; margin-bottom: 8px; font-size: 8.5pt; }
+      .section-heading::before { width: 4px; height: 14px; }
+      .summary { padding: 10px 12px; border-radius: 9px; font-size: 9pt; line-height: 1.4; }
+      .timeline { margin-left: 4px; padding-left: 17px; }
+      .entry { margin-bottom: 10px; }
+      .entry::before { left: -22px; top: 5px; width: 7px; height: 7px; }
+      .entry-title { font-size: 10pt; line-height: 1.35; }
+      .entry-meta { margin: 3px 0 5px; font-size: 8.5pt; }
+      .entry p, .plain-list li { font-size: 8.4pt; line-height: 1.35; }
+      .side-panel { padding: 11px; margin: 0; border-radius: 10px; }
+      .side-panel .section-heading { margin-bottom: 9px; }
+      .contact-list { gap: 9px; }
+      .contact-item { grid-template-columns: 22px minmax(0,1fr); gap: 7px; }
+      .contact-icon { width: 21px; height: 21px; border-radius: 6px; font-size: 9pt; }
+      .contact-label { font-size: 7.5pt; }
+      .contact-value { font-size: 8.5pt; line-height: 1.35; }
+      .plain-list { gap: 7px; }
+      .chips { gap: 5px; }
+      .chip { padding: 4px 7px; border-radius: 5px; font-size: 8pt; }
+      .footer { margin-top: auto; padding: 12px 28px; font-size: 8pt; }
+      a { color: inherit; text-decoration: none; }
+      .section, .entry, .side-panel { break-inside: avoid; page-break-inside: avoid; }
+      .hero, .layout, .footer { break-inside: avoid; }
     }
-
-   
-header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 24px;
-  padding: 32px;
-  background: linear-gradient(135deg, var(--primary), #2fa37f);
-  color: #fff;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  box-shadow: inset 0 -5px 15px rgba(0,0,0,0.05);
-}
-
-.photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid rgba(255,255,255,0.6);
-  background: rgba(255,255,255,0.15);
-  display: grid;
-  place-items: center;
-}
-
-.photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.subtitle {
-  margin-top: 8px;
-  font-size: 16px;
-  opacity: 0.85;
-}
-
-.actions {
-  margin-top: 16px;
-}
-
-.actions .btn {
-  display: inline-block;
-  background: rgba(255,255,255,0.9);
-  color: var(--primary);
-  padding: 10px 18px;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 14px;
-  margin-right: 10px;
-  transition: 0.3s;
-}
-
-.actions .btn:hover {
-  background: #fff;
-  color: var(--primary);
-  transform: translateY(-2px);
-}
-
-@media (max-width: 860px) {
-  header { grid-template-columns: 1fr; text-align: center; padding: 24px; }
-  .photo { margin: 0 auto 16px; }
-  .actions { justify-content: center; }
-}
   </style>
 </head>
-
 <body>
-
-<div class="container">
-  <div class="card">
-
-    <header>
-      <div class="photo">
-        <img src="img/myfoto.png" alt="Bohdan Sydorenko" />
-
+  <article class="resume" aria-label="Currículum de Bohdan Sydorenko">
+    <header class="hero">
+      <div class="portrait">
+        <img src="img/myfoto.png" alt="Fotografía de Bohdan Sydorenko" onerror="this.style.display='none'">
       </div>
       <div>
+        <p class="eyebrow">Currículum profesional</p>
         <h1>Bohdan Sydorenko</h1>
-        <div class="subtitle">Estudiante de Desarrollo de Aplicaciones Multiplataforma</div>
-        <div class="actions">
-          <a class="btn" href="#" id="downloadBtn">Descargar PDF</a>
-          <a class="btn" href="https://sagmanua.github.io/Portafolio/" target="_blank">Ver Portfolio</a>
-        </div>
+        <p class="role">Estudiante de Desarrollo de Aplicaciones Multiplataforma</p>
+        <nav class="actions" aria-label="Acciones del currículum">
+          <button class="btn primary" id="downloadBtn" type="button">Guardar como PDF ↗</button>
+          <a class="btn" href="https://sagmanua.github.io/Portafolio/" target="_blank" rel="noopener noreferrer">Ver portfolio ↗</a>
+        </nav>
       </div>
     </header>
 
-      <main>
-        <div>
-          <section>
-            <h2>Sobre mí</h2>
-            <div class="summary">
-              Estudiante de Desarrollo de Aplicaciones Multiplataforma con actitud proactiva y gran motivación por aprender. Busco mi primera experiencia laboral en el sector tecnológico.
-            </div>
-          </section>
+    <main class="layout">
+  <div class="main-column">
+    <section class="section">
+      <h2 class="section-heading">Perfil profesional</h2>
+      <p class="summary">Desarrollador full-stack en formación, orientado a crear aplicaciones web, bots de Telegram y herramientas de automatización. Trabajo con Python, JavaScript, PHP y SQL, cuidando la claridad del código, la experiencia de usuario y la entrega de funcionalidades prácticas. Busco una oportunidad junior o de prácticas para seguir creciendo en desarrollo de software.</p>
+    </section>
 
-          <section>
-            <h2>Experiencia</h2>
-              <div class="experience-item">
-              <strong>Practica en Iberica Digital Solutions</strong>
-              <div class="muted">Practica de Estudios</div>
-              <p>Creó un asistente de voz para llamadas y un chatbot de WhatsApp para automatizar la comunicación con los usuarios y procesar las solicitudes.</p>
-            </div>
-            <div class="experience-item">
-              <strong>Voluntario en Educación Infantil — Ucrania</strong>
-              <div class="muted">Colaboración voluntaria</div>
-              <p>Organización y apoyo en actividades educativas y recreativas, garantizando un entorno seguro y participativo.</p>
-            </div>
+    <section class="section">
+      <h2 class="section-heading">Experiencia</h2>
+      <div class="timeline">
+        <article class="entry">
+          <h3 class="entry-title">Prácticas en Iberica Digital Solutions</h3>
+          <p class="entry-meta">Prácticas formativas</p>
+          <p>Creación de un asistente de voz para llamadas y un chatbot de WhatsApp para automatizar la comunicación con los usuarios y procesar solicitudes.</p>
+        </article>
+        <article class="entry">
+          <h3 class="entry-title">Voluntariado en Educación Infantil · Ucrania</h3>
+          <p class="entry-meta">Colaboración voluntaria</p>
+          <p>Organización y apoyo en actividades educativas y recreativas, contribuyendo a un entorno seguro y participativo.</p>
+        </article>
+      </div>
+    </section>
 
-          </section>
+    <section class="section">
+      <h2 class="section-heading">Proyectos destacados</h2>
+      <div class="timeline">
+        <article class="entry">
+          <h3 class="entry-title">Bot de Telegram y herramientas para World of Tanks</h3>
+          <p class="entry-meta">Python · APIs · SQLite · JSON</p>
+          <p>Desarrollo de un bot que consulta estadísticas de jugadores y vehículos, compara datos y presenta información de mapas y equipamiento. Gestión de datos con API externa, SQLite y archivos JSON.</p>
+        </article>
+        <article class="entry">
+          <h3 class="entry-title">Portfolio web personal</h3>
+          <p class="entry-meta">HTML · CSS · JavaScript</p>
+          <p>Diseño y publicación de un portfolio adaptable para presentar perfil, tecnologías y proyectos, con navegación por secciones y acceso directo a los canales de contacto.</p>
+        </article>
+        <article class="entry">
+          <h3 class="entry-title">Aplicaciones web y automatización</h3>
+          <p class="entry-meta">PHP · MySQL · Vue · APIs</p>
+          <p>Práctica de desarrollo de interfaces y aplicaciones conectadas a servicios y bases de datos, incluyendo herramientas de navegador y funcionalidades orientadas a mejorar tareas habituales.</p>
+        </article>
+      </div>
+    </section>
 
-          <section>
-            <h2>Estudios</h2>
-            <div class="experience-item">
-              <strong>Desarrollo de Aplicaciones Multiplataforma</strong>
-              <div class="muted">2025 — Actualidad</div>
-              <p>Universidad Borcelle</p>
-            </div>
-            <div class="experience-item">
-              <strong>Bachiller en Ucrania</strong>
-              <div class="muted">2020 — 2022</div>
-              <p>Escuela Secundaria Borcelle de Matemáticas</p>
-            </div>
-          </section>
+    <section class="section">
+      <h2 class="section-heading">Formación académica</h2>
+      <div class="timeline">
+        <article class="entry">
+          <h3 class="entry-title">Desarrollo de Aplicaciones Multiplataforma</h3>
+          <p class="entry-meta">2025 — Actualidad</p>
+          <p>Universidad Borcelle</p>
+        </article>
+        <article class="entry">
+          <h3 class="entry-title">Bachillerato en Ucrania</h3>
+          <p class="entry-meta">2020 — 2022</p>
+          <p>Escuela Secundaria Borcelle de Matemáticas</p>
+        </article>
+      </div>
+    </section>
 
-          <section>
-            <h2>Competencias</h2>
-            <span class="chip">Trabajo en equipo</span>
-            <span class="chip">Resolución de problemas</span>
-            <span class="chip">Actitud proactiva</span>
-            <span class="chip">Aprendizaje continuo</span>
-          </section>
-        </div>
+    <section class="section">
+      <h2 class="section-heading">Competencias</h2>
+      <div class="chips">
+        <span class="chip">Trabajo en equipo</span><span class="chip">Resolución de problemas</span>
+        <span class="chip">Actitud proactiva</span><span class="chip">Aprendizaje continuo</span>
+      </div>
+    </section>
+  </div>
 
-        <aside>
-          <div class="block">
-            <h2>Contacto</h2>
-            <p class="muted">📞 64 557 3661</p>
-            <p class="muted">📧 sidorenko.bogdan.05@gmail.com</p>
-            <p class="muted">📍 Valencia,Malva-Rosa,46011 España</p>
-            <p class="muted">🐙 GitHub: <a href="https://github.com/Sagmanua" target="_blank">github.com/Sagmanua</a></p>
-            <p class="muted">💼 LinkedIn: <a href="https://www.linkedin.com/in/bohdan-sydorenko-6993b1397" target="_blank">bohdan-sydorenko</a></p>
-            <p class="muted">✈️ Telegram: <a href="https://t.me/Sagmanua" target="_blank">t.me/Sagmanua</a></p>
-          </div>
+  <aside class="side-column" aria-label="Información adicional">
+    <section class="side-panel">
+      <h2 class="section-heading">Contacto</h2>
+      <div class="contact-list">
+        <div class="contact-item"><span class="contact-icon" aria-hidden="true">T</span><div><span class="contact-label">Teléfono</span><a class="contact-value" href="tel:+34645573661">64 557 3661</a></div></div>
+        <div class="contact-item"><span class="contact-icon" aria-hidden="true">@</span><div><span class="contact-label">Correo</span><a class="contact-value" href="mailto:sidorenko.bogdan.05@gmail.com">sidorenko.bogdan.05@gmail.com</a></div></div>
+        <div class="contact-item"><span class="contact-icon" aria-hidden="true">⌖</span><div><span class="contact-label">Ubicación</span><span class="contact-value">Valencia, España · 46011</span></div></div>
+        <div class="contact-item"><span class="contact-icon" aria-hidden="true">GH</span><div><span class="contact-label">GitHub</span><a class="contact-value" href="https://github.com/Sagmanua" target="_blank" rel="noopener noreferrer">github.com/Sagmanua</a></div></div>
+        <div class="contact-item"><span class="contact-icon" aria-hidden="true">in</span><div><span class="contact-label">LinkedIn</span><a class="contact-value" href="https://www.linkedin.com/in/bohdan-sydorenko-6993b1397" target="_blank" rel="noopener noreferrer">Bohdan Sydorenko</a></div></div>
+        <div class="contact-item"><span class="contact-icon" aria-hidden="true">TG</span><div><span class="contact-label">Telegram</span><a class="contact-value" href="https://t.me/Sagmanua" target="_blank" rel="noopener noreferrer">@Sagmanua</a></div></div>
+      </div>
+    </section>
 
-          <div class="block">
-            <h2>Idiomas</h2>
-            <p class="muted">Ruso — Nativo</p>
-            <p class="muted">Ucraniano — Nativo</p>
-            <p class="muted">Español — Intermedio</p>
-            <p class="muted">Inglés — Intermedio</p>
-          </div>
+    <section class="side-panel">
+      <h2 class="section-heading">Idiomas</h2>
+      <ul class="plain-list">
+        <li>Ruso <span class="language-level">— Nativo</span></li>
+        <li>Ucraniano <span class="language-level">— Nativo</span></li>
+        <li>Español <span class="language-level">— Intermedio</span></li>
+        <li>Inglés <span class="language-level">— Intermedio</span></li>
+      </ul>
+    </section>
 
-          <div class="block">
-            <h2>Tecnologías</h2>
-            <span class="chip">Java</span>
-            <span class="chip">Python</span>
-            <span class="chip">SQL</span>
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-            <span class="chip">PHP</span>
-            <span class="chip">JS</span>
-          </div>
+    <section class="side-panel">
+      <h2 class="section-heading">Tecnologías</h2>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">PHP</span>
+        <span class="chip">SQL</span><span class="chip">MySQL</span><span class="chip">SQLite</span><span class="chip">Vue</span><span class="chip">HTML/CSS</span><span class="chip">APIs REST</span>
+      </div>
+    </section>
 
-          <div class="block">
-            <h2>Herramientas</h2>
-            <span class="chip">Git</span>
-            <span class="chip">GitHub</span>
-            <span class="chip">Visual Studio Code</span>
-            <span class="chip">PyCharm</span>
-            <span class="chip">MySQL Workbench</span>
-            <span class="chip">SQLite</span>
-            
-          </div>
-        </aside>
-      </main>
+    <section class="side-panel">
+      <h2 class="section-heading">Herramientas</h2>
+      <div class="chips">
+        <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">VS Code</span>
+        <span class="chip">PyCharm</span><span class="chip">MySQL Workbench</span><span class="chip">Telegram Bot API</span>
+      </div>
+    </section>
+  </aside>
+</main>
+<footer class="footer"><span>Bohdan Sydorenko</span><span>Currículum · Desarrollo de software</span></footer>
 
-      <footer>
-        CV — Bohdan Sydorenko
-      </footer>
+  </article>
 
-<!-- PDF library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-<script>
-  document.getElementById('downloadBtn').addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const element = document.querySelector('.card');
-
-    const options = {
-      margin: 0,
-      filename: 'CV_Bohdan_Sydorenko.pdf',
-      image: { type: 'jpeg', quality: 1 },
-      html2canvas: { scale: 3 },  // higher scale for better quality
-      jsPDF: { unit: 'px', format: [element.scrollWidth, element.scrollHeight] } // custom page size
-    };
-
-    html2pdf().set(options).from(element).save();
-  });
-</script>
-
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', function () {
+      // The browser's native PDF export is reliable and does not need an external library.
+      window.print();
+    });
+  </script>
 </body>
 </html>
